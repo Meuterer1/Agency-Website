@@ -46,7 +46,7 @@ header {
     z-index: 1;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     height: 1800px;
     padding: 0;
   }
@@ -115,7 +115,7 @@ header {
     border-radius: 50%;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     top: 950px;
     left: 50%;
     transform: translateX(-50%);
@@ -199,7 +199,7 @@ header {
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     width: 100%;
     padding: 130px 0 0 0;
 
