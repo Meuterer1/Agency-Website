@@ -1,9 +1,10 @@
 import React from 'react'
+import Header from '../components/Header'
 
 const App: React.FC = () => {
   return (
     <>
-      <h1>Strona React</h1>
+      <Header />
     </>
   )
 }

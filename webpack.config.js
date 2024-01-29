@@ -14,6 +14,14 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
+  devServer: {
+    static: {
+      directory: './public',
+      watch: true
+    },
+    port: 3000
+  },
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -24,8 +32,17 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        test: /\.(s(a|c)ss)$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
       }
     ]
   },
