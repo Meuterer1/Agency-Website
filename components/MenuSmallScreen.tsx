@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 
-const MenuSmallScreen = () => {
+const MenuSmallScreen: React.FC = () => {
   const [isMenuActive, setIsMenuActive] = useState(false)
 
   const handleMenuOnClick = (): void => {

@@ -47,7 +47,7 @@ const ServicesSection = styled.section`
   }
 `
 
-const Services = () => {
+const Services: React.FC = () => {
   const CardComponentArray: CardComponentProps[] = [
     {
       img: 'assets/Pen.png',

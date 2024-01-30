@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const MenuBigScreen = () => {
+const MenuBigScreen: React.FC = () => {
   return (
     <nav>
       <div className="divFlex">
