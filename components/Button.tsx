@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 interface ButtonProps {
   background: string
-  spanBackground: string
+  spanbackground: string
 }
 
 export interface StyledButtonProps extends ButtonProps {
@@ -26,7 +26,7 @@ const ButtonSection = styled.button<ButtonProps>`
   }
 
   span {
-    background-color: ${props => props.spanBackground};
+    background-color: ${props => props.spanbackground};
     width: 28px;
     height: 28px;
     border-radius: 50%;
@@ -45,7 +45,7 @@ const Button = (props: StyledButtonProps) => {
   return (
     <ButtonSection
       background={props.background}
-      spanBackground={props.spanBackground}
+      spanbackground={props.spanbackground}
     >
       <span>
         <img src="assets/ArrowRight.png" alt="arrow right" />

@@ -135,11 +135,12 @@ const Mission: React.FC = () => {
   return (
     <MissionSection>
       <div className="MissionImage" ref={ref}>
-        {images.map(item => (
+        {images.map((item, index) => (
           <animated.img
             src={item.src}
             alt="people"
             style={{ ...animatedProps }}
+            key={index}
           />
         ))}
       </div>
@@ -164,7 +165,7 @@ const Mission: React.FC = () => {
         <Button
           text="Start your Free Trial"
           background="#FBFBFB"
-          spanBackground="#0C0C0C"
+          spanbackground="#0C0C0C"
         />
       </div>
     </MissionSection>
