@@ -1,4 +1,5 @@
 import React from 'react'
+import Gallery from '../components/Gallery'
 import Header from '../components/Header'
 import Mission from '../components/Mission'
 import Process from '../components/Process'
@@ -11,6 +12,7 @@ const App: React.FC = () => {
       <Services />
       <Mission />
       <Process />
+      <Gallery />
     </>
   )
 }

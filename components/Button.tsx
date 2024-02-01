@@ -3,6 +3,7 @@ import styled from 'styled-components'
 interface ButtonProps {
   background: string
   spanbackground: string
+  color?: string
 }
 
 export interface StyledButtonProps extends ButtonProps {
@@ -19,6 +20,8 @@ const ButtonSection = styled.button<ButtonProps>`
   gap: 10px;
   align-items: center;
   margin-bottom: 81px;
+  max-width: 268px;
+  color: ${props => (props.color ? props.color : 'black')};
 
   &:hover {
     background-color: #64ccc5;
@@ -42,13 +45,22 @@ const ButtonSection = styled.button<ButtonProps>`
 `
 
 const Button = (props: StyledButtonProps) => {
+  const { background, spanbackground, color } = props
   return (
     <ButtonSection
-      background={props.background}
-      spanbackground={props.spanbackground}
+      background={background}
+      spanbackground={spanbackground}
+      color={color}
     >
       <span>
-        <img src="assets/ArrowRight.png" alt="arrow right" />
+        <img
+          src={`${
+            spanbackground === '#FBFBFB'
+              ? 'assets/BlackArrowRight.png'
+              : 'assets/ArrowRight.png'
+          }`}
+          alt="arrow right"
+        />
       </span>
       {props.text}
     </ButtonSection>

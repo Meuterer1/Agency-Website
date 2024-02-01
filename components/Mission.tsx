@@ -12,6 +12,7 @@ const MissionSection = styled.section`
   justify-content: space-between;
   align-items: center;
   padding: 100px 5% 80px 5%;
+  overflow: hidden;
 
   h5,
   h4 {
@@ -65,7 +66,6 @@ const MissionSection = styled.section`
 
     button {
       margin-top: 32px;
-      width: 268px;
     }
   }
 

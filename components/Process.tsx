@@ -7,8 +7,9 @@ import ProcessStep from '../components/ProcessStep'
 const ProcessSection = styled.section`
   display: flex;
   flex-direction: column;
-  padding: 110px;
+  padding: 110px 50px;
   align-items: center;
+  justify-content: center;
   text-align: center;
 
   .ProcessSectionHeadline {
@@ -27,7 +28,8 @@ const ProcessSection = styled.section`
 
   .ProcessSteps {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 10px;
     flex-wrap: wrap;
   }
 `

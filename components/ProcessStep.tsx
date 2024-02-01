@@ -30,7 +30,7 @@ const ProcessDiv = styled(animated.div)`
     z-index: -1;
   }
 
-  div:first-of-type {
+  .ProcessHeadline {
     display: flex;
     justify-content: space-around;
     padding: 0 5px;
@@ -67,10 +67,12 @@ const ProcessStep = (props: ProcesStepProps) => {
   return (
     <ProcessDiv ref={ref} style={{ ...animatedProcess }}>
       <div>
-        <img src={src} alt={alt} />
-        <h5>{title}</h5>
+        <div className="ProcessHeadline">
+          <img src={src} alt={alt} />
+          <h5>{title}</h5>
+        </div>
+        <p>{content}</p>
       </div>
-      <p>{content}</p>
     </ProcessDiv>
   )
 }
