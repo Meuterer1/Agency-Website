@@ -1,7 +1,7 @@
 import { animated, useSpring } from '@react-spring/web'
 import { useInView } from 'react-intersection-observer'
 import styled from 'styled-components'
-import Button from './Button'
+import { Button } from './Button'
 import GalleryItem from './GalleryItem'
 
 const GallerySection = styled.section`
@@ -10,6 +10,7 @@ const GallerySection = styled.section`
   justify-content: center;
   flex-wrap: wrap;
   overflow: hidden;
+  background-color: white;
 
   h3 {
     width: 100%;

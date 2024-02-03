@@ -2,8 +2,13 @@ import styled from 'styled-components'
 
 interface ButtonProps {
   background: string
-  spanbackground: string
+  spanbackground?: string
   color?: string
+}
+
+interface ArrowButton {
+  background: string
+  content: string
 }
 
 export interface StyledButtonProps extends ButtonProps {
@@ -44,7 +49,21 @@ const ButtonSection = styled.button<ButtonProps>`
   }
 `
 
-const Button = (props: StyledButtonProps) => {
+const SliderButtonSection = styled(ButtonSection)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin: 0;
+
+  &:hover {
+    border: 1px solid transparent;
+  }
+`
+
+export const Button = (props: StyledButtonProps) => {
   const { background, spanbackground, color } = props
   return (
     <ButtonSection
@@ -67,4 +86,11 @@ const Button = (props: StyledButtonProps) => {
   )
 }
 
-export default Button
+export const SliderButton = ({ content, background }: ArrowButton) => {
+  return (
+    <SliderButtonSection background={background}>
+      {' '}
+      <img src={content} alt="arrow" />{' '}
+    </SliderButtonSection>
+  )
+}

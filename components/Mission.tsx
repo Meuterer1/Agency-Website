@@ -3,7 +3,7 @@ import { easePolyOut } from 'd3-ease'
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
 import styled from 'styled-components'
-import Button from './Button'
+import { Button } from './Button'
 
 const MissionSection = styled.section`
   background-color: black;
