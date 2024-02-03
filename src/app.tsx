@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../components/Footer'
 import Gallery from '../components/Gallery'
 import Header from '../components/Header'
 import Mission from '../components/Mission'
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       <Process />
       <Gallery />
       <Quotes />
+      <Footer />
     </>
   )
 }

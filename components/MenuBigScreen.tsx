@@ -1,13 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Logo from './Logo'
 
 const MenuBigScreen: React.FC = () => {
   return (
     <nav>
-      <div className="divFlex">
-        <img src="assets/Logo.png" aria-label="logo" className="imgLogo" />
-        <h5>Canvix</h5>
-      </div>
+      <Logo />
       <div className="divFlex">
         <ul className="divFlex">
           <li>
