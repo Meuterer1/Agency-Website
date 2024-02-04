@@ -82,7 +82,7 @@ const Gallery = () => {
             alt="flower"
             headline="Web UI design"
             text="Creative  UI design"
-            x={-300}
+            x={-150}
             delay={2000}
           />
           <GalleryItem
@@ -90,8 +90,8 @@ const Gallery = () => {
             alt="flowers"
             headline="UI Design"
             text="Creative Rebranding for logo"
-            x={-300}
-            delay={500}
+            x={-150}
+            delay={1500}
           />
         </div>
         <div className="GalleryItems">
@@ -106,7 +106,7 @@ const Gallery = () => {
             alt="MEN"
             headline="To design Digital Strategy"
             text="Social Media Marketing"
-            x={300}
+            x={150}
             delay={1000}
           />
           <GalleryItem
@@ -114,8 +114,8 @@ const Gallery = () => {
             alt="woman"
             headline="UI Design"
             text="Creative Rebranding for logo"
-            x={300}
-            delay={1000}
+            x={150}
+            delay={1500}
           />
         </div>
       </div>

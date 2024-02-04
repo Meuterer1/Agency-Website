@@ -100,7 +100,7 @@ const Header: React.FC = () => {
                   <img src="assets/Leafe.png" alt="Leafe logo" />
                 </li>
                 <li>
-                  <img src="assets/Mindfullness.png" alt="Mindfulness logo" />
+                  <img src="assets/Mindfullness.png" alt="Mindfullness logo" />
                 </li>
               </ul>
             </div>
