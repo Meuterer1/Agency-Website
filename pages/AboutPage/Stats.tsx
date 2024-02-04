@@ -1,5 +1,6 @@
 import { animated, useSpring } from '@react-spring/web'
 import { easeBackOut } from 'd3-ease'
+import { useInView } from 'react-intersection-observer'
 import styled from 'styled-components'
 
 interface StatsProps {
@@ -33,6 +34,10 @@ const StatsDiv = styled(animated.div)`
 const Stats = (props: StatsProps) => {
   const { title, subTitle, content } = props
 
+  const [ref, inView] = useInView({
+    triggerOnce: true
+  })
+
   const animatedStats = useSpring({
     from: { y: 200, opacity: 0 },
     to: { y: 0, opacity: 1 },
@@ -40,11 +45,12 @@ const Stats = (props: StatsProps) => {
     config: {
       duration: 1500,
       easing: easeBackOut
-    }
+    },
+    pause: inView ? false : true
   })
 
   return (
-    <StatsDiv style={{ ...animatedStats }}>
+    <StatsDiv ref={ref} style={{ ...animatedStats }}>
       <h4>{title}</h4>
       <h6>{subTitle}</h6>
       <p>{content}</p>
