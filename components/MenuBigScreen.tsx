@@ -18,7 +18,8 @@ const MenuBigScreenNav = styled.nav<MenuBigScreenProps>`
   color: ${props => props.color};
 
   button {
-    background-color: white;
+    background-color: ${props => (props.color === 'black' ? 'black' : 'white')};
+    color: ${props => (props.color === 'black' ? 'white' : 'black')};
     padding: 8px 15px;
     border-radius: 23px;
     border: none;
@@ -33,7 +34,9 @@ const MenuBigScreenNav = styled.nav<MenuBigScreenProps>`
   }
 
   a {
-    color: white;
+    color: ${props => props.color};
+    font-size: 20px;
+    font-weight: 400;
     &:hover {
       color: #64ccc5;
     }
@@ -43,7 +46,7 @@ const MenuBigScreenNav = styled.nav<MenuBigScreenProps>`
 const MenuBigScreen = (props: MenuBigScreenProps) => {
   return (
     <MenuBigScreenNav color={props.color}>
-      <Logo />
+      <Logo color={props.color} />
       <div className="divFlex">
         <ul className="divFlex">
           <li>

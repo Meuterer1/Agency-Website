@@ -12,6 +12,7 @@ const HeadSection = styled.section`
     color: white;
     width: 100%;
     justify-content: center;
+    
     &::before {
       content: '';
       background: url('assets/HeaderBackground.png'),

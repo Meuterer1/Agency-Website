@@ -91,7 +91,7 @@ const Footer: React.FC = () => {
     <FooterSection>
       <div className="footerContent">
         <div className="footerLogo">
-          <Logo />
+          <Logo color="white" />
           <p>
             We’re a team of strategic creator and digital innovator, united
             focus in our pursuit of mastery and joyful.
