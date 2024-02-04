@@ -1,3 +1,5 @@
+import { animated, useSpring } from '@react-spring/web'
+import { easeBackOut } from 'd3-ease'
 import styled from 'styled-components'
 
 interface StatsProps {
@@ -6,7 +8,7 @@ interface StatsProps {
   content: string
 }
 
-const StatsDiv = styled.div`
+const StatsDiv = styled(animated.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,8 +33,18 @@ const StatsDiv = styled.div`
 const Stats = (props: StatsProps) => {
   const { title, subTitle, content } = props
 
+  const animatedStats = useSpring({
+    from: { y: 200, opacity: 0 },
+    to: { y: 0, opacity: 1 },
+    delay: 2000,
+    config: {
+      duration: 1500,
+      easing: easeBackOut
+    }
+  })
+
   return (
-    <StatsDiv>
+    <StatsDiv style={{ ...animatedStats }}>
       <h4>{title}</h4>
       <h6>{subTitle}</h6>
       <p>{content}</p>

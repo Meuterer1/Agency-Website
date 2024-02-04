@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
+import { animated, useSpring } from '@react-spring/web'
 import MenuBigScreen from '../../components/MenuBigScreen'
 import MenuSmallScreen from '../../components/MenuSmallScreen'
 import Stats from './Stats'
@@ -162,6 +163,43 @@ const Header = () => {
       window.removeEventListener('resize', handleResize)
     }
   }, [])
+
+  const animatedImage = useSpring({
+    from: { x: 150, y: 150, opacity: 0 },
+    to: { x: 0, y: 0, opacity: 1 },
+    delay: 500,
+    config: {
+      tension: 170,
+      friction: 12,
+      mass: 1,
+      duration: 800
+    }
+  })
+
+  const animatedImageSecond = useSpring({
+    from: { x: 150, y: 150, opacity: 0 },
+    to: { x: 0, y: 0, opacity: 1 },
+    delay: 1000,
+    config: {
+      tension: 170,
+      friction: 12,
+      mass: 1,
+      duration: 800
+    }
+  })
+
+  const animatedImageThird = useSpring({
+    from: { x: 150, y: 150, opacity: 0 },
+    to: { x: 0, y: 0, opacity: 1 },
+    delay: 1500,
+    config: {
+      tension: 170,
+      friction: 12,
+      mass: 1,
+      duration: 800
+    }
+  })
+
   return (
     <HeaderSection>
       {windowWidth > 900 ? (
@@ -188,9 +226,21 @@ const Header = () => {
           </p>
         </div>
         <div className="HeaderImage">
-          <img src="assets/AboutLayer1.png" alt="people" />
-          <img src="assets/AboutLayer2.png" alt="people" />
-          <img src="assets/AboutLayer3.png" alt="people" />
+          <animated.img
+            src="assets/AboutLayer1.png"
+            alt="people"
+            style={{ ...animatedImage }}
+          />
+          <animated.img
+            src="assets/AboutLayer2.png"
+            alt="people"
+            style={{ ...animatedImageSecond }}
+          />
+          <animated.img
+            src="assets/AboutLayer3.png"
+            alt="people"
+            style={{ ...animatedImageThird }}
+          />
         </div>
       </div>
       <div className="HeaderStats">
