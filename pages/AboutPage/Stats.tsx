@@ -41,7 +41,7 @@ const Stats = (props: StatsProps) => {
   const animatedStats = useSpring({
     from: { y: 200, opacity: 0 },
     to: { y: 0, opacity: 1 },
-    delay: 2000,
+    delay: 500,
     config: {
       duration: 1500,
       easing: easeBackOut
