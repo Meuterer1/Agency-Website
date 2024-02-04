@@ -167,7 +167,7 @@ const Header = () => {
       {windowWidth > 900 ? (
         <MenuBigScreen color="black" />
       ) : (
-        <MenuSmallScreen />
+        <MenuSmallScreen color="black" />
       )}
       <div className="headerBanner">
         <div className="headerTextDiv">

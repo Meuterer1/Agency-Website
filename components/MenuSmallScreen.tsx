@@ -4,14 +4,21 @@ import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import Logo from './Logo'
 
-const MenuSmallScreenNav = styled.nav`
+interface MenuSmallScreenProps {
+  color: string
+}
+
+const MenuSmallScreenNav = styled.nav<MenuSmallScreenProps>`
   display: flex;
   justify-content: space-between;
+  width: 100%;
   padding: 20px 10%;
+  color: ${props => props.color};
 `
 
-const MenuSmallScreen: React.FC = () => {
+const MenuSmallScreen = (props: MenuSmallScreenProps) => {
   const [isMenuActive, setIsMenuActive] = useState(false)
 
   const handleMenuOnClick = (): void => {
@@ -20,11 +27,8 @@ const MenuSmallScreen: React.FC = () => {
 
   return (
     <>
-      <MenuSmallScreenNav>
-        <div className="divFlex">
-          <img src="assets/Logo.png" aria-label="logo" className="imgLogo" />
-          <h5>Canvix</h5>
-        </div>
+      <MenuSmallScreenNav color={props.color}>
+        <Logo color={props.color} />
         <FontAwesomeIcon icon={faBars} size="2xl" onClick={handleMenuOnClick} />
       </MenuSmallScreenNav>
 

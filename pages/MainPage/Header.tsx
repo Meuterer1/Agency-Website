@@ -12,7 +12,7 @@ const HeadSection = styled.section`
     color: white;
     width: 100%;
     justify-content: center;
-    
+
     &::before {
       content: '';
       background: url('assets/HeaderBackground.png'),
@@ -357,7 +357,7 @@ const Header: React.FC = () => {
         {windowWidth > 900 ? (
           <MenuBigScreen color="white" />
         ) : (
-          <MenuSmallScreen />
+          <MenuSmallScreen color="white" />
         )}
         <section className="headerContentSection">
           <div className="headerTextDiv">
