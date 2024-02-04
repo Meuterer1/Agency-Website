@@ -1,21 +1,16 @@
 import React from 'react'
+import { Route, Routes } from 'react-router'
 import Footer from '../components/Footer'
-import Gallery from '../components/Gallery'
-import Header from '../components/Header'
-import Mission from '../components/Mission'
-import Process from '../components/Process'
-import Quotes from '../components/Quotes'
-import Services from '../components/Services'
+import MainPage from '../pages/MainPage/MainPage'
 
 const App: React.FC = () => {
   return (
     <>
-      <Header />
-      <Services />
-      <Mission />
-      <Process />
-      <Gallery />
-      <Quotes />
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/about" element={<MainPage />} />
+        <Route path="/contact" element={<MainPage />} />
+      </Routes>
       <Footer />
     </>
   )

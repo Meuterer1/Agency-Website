@@ -3,6 +3,13 @@ import { useState } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+
+const MenuSmallScreenNav = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10%;
+`
 
 const MenuSmallScreen: React.FC = () => {
   const [isMenuActive, setIsMenuActive] = useState(false)
@@ -13,13 +20,13 @@ const MenuSmallScreen: React.FC = () => {
 
   return (
     <>
-      <nav>
+      <MenuSmallScreenNav>
         <div className="divFlex">
           <img src="assets/Logo.png" aria-label="logo" className="imgLogo" />
           <h5>Canvix</h5>
         </div>
         <FontAwesomeIcon icon={faBars} size="2xl" onClick={handleMenuOnClick} />
-      </nav>
+      </MenuSmallScreenNav>
 
       {isMenuActive && (
         <div className="smallMenuActive">

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import CardComponent, { CardComponentProps } from './Card'
+import CardComponent, { CardComponentProps } from '../../components/Card'
 
 const ServicesSection = styled.section`
   padding: 100px 60px 127px 60px;

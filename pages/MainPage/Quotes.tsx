@@ -1,7 +1,7 @@
 import { animated, useSpring } from '@react-spring/web'
 import { useInView } from 'react-intersection-observer'
 import styled from 'styled-components'
-import { SliderButton } from './Button'
+import { SliderButton } from '../../components/Button'
 
 const QuotesSection = styled(animated.section)`
   margin: 100px;

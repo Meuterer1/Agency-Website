@@ -2,7 +2,7 @@ import { animated, useSpring } from '@react-spring/web'
 import { easePolyOut } from 'd3-ease'
 import { useInView } from 'react-intersection-observer'
 import styled from 'styled-components'
-import ProcessStep from '../components/ProcessStep'
+import ProcessStep from './ProcessStep'
 
 const ProcessSection = styled.section`
   display: flex;

@@ -1,7 +1,7 @@
 import { animated, useSpring } from '@react-spring/web'
 import { useInView } from 'react-intersection-observer'
 import styled from 'styled-components'
-import { Button } from './Button'
+import { Button } from '../../components/Button'
 import GalleryItem from './GalleryItem'
 
 const GallerySection = styled.section`

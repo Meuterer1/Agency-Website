@@ -1,0 +1,27 @@
+nav {
+  display: flex;
+  align-items: end;
+  align-self: center;
+  justify-content: space-between;
+  width: 80%;
+  padding: 22px 0;
+
+  button {
+    background-color: white;
+    padding: 8px 15px;
+    border-radius: 23px;
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.54px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #64ccc5;
+    }
+  }
+
+  @media (max-width: 900px) {
+    align-items: center;
+  }
+}

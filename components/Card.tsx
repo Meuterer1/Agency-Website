@@ -84,8 +84,6 @@ const CardComponent = (props: CardComponentProps) => {
     pause: inView ? false : true
   })
 
-  console.log('Animated props: ', animatedProps)
-
   return (
     <Card
       background={background}
