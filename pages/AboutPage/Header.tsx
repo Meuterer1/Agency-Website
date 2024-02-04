@@ -120,6 +120,10 @@ const HeaderSection = styled.header`
     padding-top: 100px;
     width: 80%;
     gap: 50px;
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
   }
 `
 
