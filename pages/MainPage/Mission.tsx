@@ -2,6 +2,7 @@ import { animated, useSpring } from '@react-spring/web'
 import { easePolyOut } from 'd3-ease'
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { Button } from '../../components/Button'
 
@@ -121,6 +122,12 @@ const Mission: React.FC = () => {
     triggerOnce: true
   })
 
+  const navigate = useNavigate()
+
+  const handleButtonOnClick = () => {
+    navigate('/contact')
+  }
+
   const animatedProps = useSpring({
     from: { x: 400, opacity: 0 },
     to: { x: 0, opacity: 1 },
@@ -166,6 +173,7 @@ const Mission: React.FC = () => {
           text="Start your Free Trial"
           background="#FBFBFB"
           spanbackground="#0C0C0C"
+          onClick={handleButtonOnClick}
         />
       </div>
     </MissionSection>

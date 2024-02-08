@@ -1,7 +1,7 @@
-import React from 'react'
+import { ButtonHTMLAttributes, FC } from 'react'
 import styled from 'styled-components'
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   background: string
   spanbackground?: string
   color?: string
@@ -64,13 +64,19 @@ const SliderButtonSection = styled(ButtonSection)`
   }
 `
 
-export const Button = (props: StyledButtonProps) => {
-  const { background, spanbackground, color } = props
+export const Button: FC<StyledButtonProps> = ({
+  background,
+  spanbackground,
+  color,
+  text,
+  ...props
+}) => {
   return (
     <ButtonSection
       background={background}
       spanbackground={spanbackground}
       color={color}
+      {...props}
     >
       <span>
         <img
@@ -82,7 +88,7 @@ export const Button = (props: StyledButtonProps) => {
           alt="arrow right"
         />
       </span>
-      {props.text}
+      {text}
     </ButtonSection>
   )
 }

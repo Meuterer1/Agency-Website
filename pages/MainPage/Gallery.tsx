@@ -1,5 +1,6 @@
 import { animated, useSpring } from '@react-spring/web'
 import { useInView } from 'react-intersection-observer'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { Button } from '../../components/Button'
 import GalleryItem from './GalleryItem'
@@ -61,6 +62,12 @@ const Gallery = () => {
     triggerOnce: true
   })
 
+  const navigate = useNavigate()
+
+  const handleButtonClick = () => {
+    navigate('/contact')
+  }
+
   const animatedGalleryHeadline = useSpring({
     from: { opacity: 0, y: 100 },
     to: { opacity: 1, y: 0 },
@@ -100,6 +107,7 @@ const Gallery = () => {
             background="#0C0C0C"
             spanbackground="#FBFBFB"
             color="#FBFBFB"
+            onClick={handleButtonClick}
           />
           <GalleryItem
             src="assets/Gallery1.png"

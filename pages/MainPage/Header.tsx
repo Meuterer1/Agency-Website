@@ -1,9 +1,11 @@
 import { animated, useSpring } from '@react-spring/web'
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import MenuBigScreen from '../../components/MenuBigScreen'
 import MenuSmallScreen from '../../components/MenuSmallScreen'
 
 import styled from 'styled-components'
+import { Button } from '../../components/Button'
 
 const HeadSection = styled.section`
     background: black;
@@ -282,27 +284,12 @@ const HeadSection = styled.section`
       padding: 50px 20px 30px 20px;
       align-items: end;
     }
-
-    button {
-      background-color: white;
-      padding: 8px 15px;
-      border-radius: 23px;
-      border: none;
-      font-size: 18px;
-      font-weight: 400;
-      letter-spacing: 0.54px;
-      width: fit-content;
-      width: -moz-fit-content;
-
-      &:hover {
-        cursor: pointer;
-        background-color: #64ccc5;
-      }
-    }
 `
 
 const Header: React.FC = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleResize = (): void => {
@@ -351,6 +338,10 @@ const Header: React.FC = () => {
     config: { tension: 170, friction: 12, mass: 1, duration: 200 }
   })
 
+  const handleOnClick = () => {
+    navigate('/contact')
+  }
+
   return (
     <HeadSection>
       <div className="headerContainer">
@@ -379,12 +370,12 @@ const Header: React.FC = () => {
                 customers and strengthen your brand. We specialize in marketing,
                 promotional strategy, and creative campaign design.
               </p>
-              <button>
-                <span>
-                  <img src="assets/ArrowRight.png" alt="arrow right" />
-                </span>
-                Start your Free Trial
-              </button>
+              <Button
+                text="Start your Free Trial"
+                background="#FBFBFB"
+                spanbackground="#0C0C0C"
+                onClick={handleOnClick}
+              />
             </div>
             <div className="brands">
               <p>Trusted by Laeading Brands</p>

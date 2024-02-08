@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import Logo from './Logo'
 
@@ -44,6 +44,11 @@ const MenuBigScreenNav = styled.nav<MenuBigScreenProps>`
 `
 
 const MenuBigScreen = (props: MenuBigScreenProps) => {
+  const navigate = useNavigate()
+  const handleButtonOnClick = () => {
+    navigate('/contact')
+  }
+
   return (
     <MenuBigScreenNav color={props.color}>
       <Logo color={props.color} />
@@ -60,7 +65,7 @@ const MenuBigScreen = (props: MenuBigScreenProps) => {
           </li>
         </ul>
       </div>
-      <button>Get in touch</button>
+      <button onClick={handleButtonOnClick}>Get in touch</button>
     </MenuBigScreenNav>
   )
 }

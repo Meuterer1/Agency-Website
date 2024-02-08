@@ -22,7 +22,7 @@
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.5.3",
     "react-router": "^6.19.0",
-    "react-router-dom": "^6.21.3",
+    "react-router-dom": "^6.22.0",
     "styled-components": "^6.1.1",
     "webpack-dev-server": "^4.15.1"
   },
