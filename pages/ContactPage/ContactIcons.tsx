@@ -13,7 +13,7 @@ const ContactIcons = () => {
   const animatedIcons = useSpring({
     from: { y: 100, opacity: 0 },
     to: { y: 0, opacity: 1 },
-    delay: 2000,
+    delay: 100,
     config: {
       duration: 1000,
       easing: easeBackInOut

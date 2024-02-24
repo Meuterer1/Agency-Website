@@ -19,7 +19,7 @@ module.exports = {
       directory: './public',
       watch: true
     },
-    port: 3000
+    port: 3001
   },
   devtool: 'inline-source-map',
   module: {

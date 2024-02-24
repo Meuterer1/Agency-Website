@@ -167,7 +167,7 @@ const Header = () => {
   const animatedImage = useSpring({
     from: { x: 150, y: 150, opacity: 0 },
     to: { x: 0, y: 0, opacity: 1 },
-    delay: 500,
+    delay: 100,
     config: {
       tension: 170,
       friction: 12,
@@ -179,7 +179,7 @@ const Header = () => {
   const animatedImageSecond = useSpring({
     from: { x: 150, y: 150, opacity: 0 },
     to: { x: 0, y: 0, opacity: 1 },
-    delay: 1000,
+    delay: 500,
     config: {
       tension: 170,
       friction: 12,
@@ -191,7 +191,7 @@ const Header = () => {
   const animatedImageThird = useSpring({
     from: { x: 150, y: 150, opacity: 0 },
     to: { x: 0, y: 0, opacity: 1 },
-    delay: 1500,
+    delay: 800,
     config: {
       tension: 170,
       friction: 12,

@@ -307,14 +307,14 @@ const Header: React.FC = () => {
     from: { transform: 'translateX(0deg)' },
     to: { transform: 'translateX(360deg)' },
     delay: 500,
-    config: { duration: 1000 }
+    config: { duration: 500 }
   })
 
   const animatedOpacity = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
-    delay: 500,
-    config: { duration: 2000 }
+    delay: 200,
+    config: { duration: 500 }
   })
 
   const animatedNeon = useSpring({
@@ -334,7 +334,7 @@ const Header: React.FC = () => {
       await next({ opacity: 0, velocity: 0, reset: true })
       await next({ opacity: 1, velocity: 0, reset: true })
     },
-    delay: 2100,
+    delay: 500,
     config: { tension: 170, friction: 12, mass: 1, duration: 200 }
   })
 

@@ -71,7 +71,7 @@ const Gallery = () => {
   const animatedGalleryHeadline = useSpring({
     from: { opacity: 0, y: 100 },
     to: { opacity: 1, y: 0 },
-    delay: 500,
+    delay: 100,
     pause: InView ? false : true,
     config: {
       duration: 1500
@@ -90,7 +90,7 @@ const Gallery = () => {
             headline="Web UI design"
             text="Creative  UI design"
             x={-150}
-            delay={2000}
+            delay={100}
           />
           <GalleryItem
             src="assets/Gallery2.png"
@@ -98,7 +98,7 @@ const Gallery = () => {
             headline="UI Design"
             text="Creative Rebranding for logo"
             x={-150}
-            delay={1500}
+            delay={300}
           />
         </div>
         <div className="GalleryItems">
@@ -115,7 +115,7 @@ const Gallery = () => {
             headline="To design Digital Strategy"
             text="Social Media Marketing"
             x={150}
-            delay={1000}
+            delay={500}
           />
           <GalleryItem
             src="assets/Gallery4.png"
@@ -123,7 +123,7 @@ const Gallery = () => {
             headline="UI Design"
             text="Creative Rebranding for logo"
             x={150}
-            delay={1500}
+            delay={500}
           />
         </div>
       </div>

@@ -65,7 +65,7 @@ const Services: React.FC = () => {
         'Unlock the power of visual storytelling with our expert graphic design services tailored to elevate your brand and captivate.',
       background: '#F4F4F4',
       color: '#0C0C0C',
-      delay: 500
+      delay: 250
     },
     {
       img: 'assets/Speaker.png',
@@ -74,7 +74,7 @@ const Services: React.FC = () => {
         'Elevate your brand s online presence with our data-driven digital marketing strategies. From SEO and content marketing',
       background: '#F4F4F4',
       color: '#0C0C0C',
-      delay: 900
+      delay: 400
     },
     {
       img: 'assets/Palette.png',
@@ -83,7 +83,7 @@ const Services: React.FC = () => {
         'We specialize in creating visually stunning, user-friendly websites that align with your brand identity and deliver an exceptional.',
       background: '#F4F4F4',
       color: '#0C0C0C',
-      delay: 1200
+      delay: 100
     },
     {
       img: 'assets/Consultant.png',
@@ -92,7 +92,7 @@ const Services: React.FC = () => {
         'IT consulting, or information technology consulting, refers to the practice of providing advisory and implementation services',
       background: '#F4F4F4',
       color: '#0C0C0C',
-      delay: 1500
+      delay: 250
     },
     {
       img: 'assets/Diamond.png',
@@ -101,7 +101,7 @@ const Services: React.FC = () => {
         'It involves creating a unique and recognizable identity that sets the brand apart from competitors and resonates with the target audience.',
       background: '#F4F4F4',
       color: '#0C0C0C',
-      delay: 1800
+      delay: 400
     }
   ]
 
