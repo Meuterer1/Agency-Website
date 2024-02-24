@@ -18,7 +18,7 @@ const ContactDetailsDiv = styled(animated.div)`
     background-color: black;
     border-radius: 50%;
     padding: 10px;
-    object-fit: fill;
+    object-fit: none;
     height: 50px;
     width: 50px;
   }

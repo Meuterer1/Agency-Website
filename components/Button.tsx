@@ -56,6 +56,10 @@ const ButtonSection = styled.button<ButtonProps>`
     padding: 0;
   }
 
+  @media (max-width: 1000px) {
+    padding: 10px 20px 10px 10px;
+  }
+
   @media (max-width: 460px) {
     gap: 5px;
     padding: 10px 15px 10px 5px;

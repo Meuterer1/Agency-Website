@@ -40,7 +40,7 @@ const HeaderContactSection = styled.header`
       height: 1px;
       bottom: 0;
       left: 0;
-      background: #dfdfdf;
+      background: #c8c8c8;
       position: absolute;
     }
   }
@@ -82,7 +82,7 @@ const HeaderContactSection = styled.header`
       height: 1px;
       bottom: 0;
       left: 0;
-      background: #dfdfdf;
+      background: #c8c8c8;
       position: absolute;
     }
   }

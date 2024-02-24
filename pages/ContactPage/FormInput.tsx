@@ -19,7 +19,7 @@ const FormInputDiv = styled.div`
     height: 50px;
     background: transparent;
     border: none;
-    border-bottom: 1px solid #dfdfdf;
+    border-bottom: 1px solid #c8c8c8;
     margin-bottom: 50px;
 
     &:focus-visible {
