@@ -34,8 +34,12 @@ const ButtonSection = styled.button<ButtonProps>`
     cursor: pointer;
   }
 
-  &:focus {
+  &:focus,
+  &:active,
+  &:target,
+  &:focus-visible {
     outline: 3px dotted #64ccc5;
+    transition: none;
   }
 
   span {

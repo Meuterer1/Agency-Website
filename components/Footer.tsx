@@ -25,8 +25,12 @@ const FooterSection = styled.footer`
         color: #64ccc5;
       }
 
-      &:focus {
+      &:focus,
+      &:active,
+      &:target,
+      &:focus-visible {
         outline: 1px dotted #64ccc5;
+        transition: none;
       }
     }
 

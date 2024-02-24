@@ -44,8 +44,12 @@ const SubscribeDiv = styled.div`
       cursor: pointer;
     }
 
-    &:focus {
+    &:focus,
+    &:active,
+    &:target,
+    &:focus-visible {
       outline: 3px dotted #64ccc5;
+      transition: none;
     }
 
     @media (max-width: 420px) {

@@ -33,8 +33,12 @@ const MenuBigScreenNav = styled.nav<MenuBigScreenProps>`
       background-color: #64ccc5;
     }
 
-    &:focus {
+    &:focus,
+    &:active,
+    &:target,
+    &:focus-visible {
       outline: 3px dotted #64ccc5;
+      transition: none;
     }
   }
 
@@ -48,8 +52,12 @@ const MenuBigScreenNav = styled.nav<MenuBigScreenProps>`
       color: #64ccc5;
     }
 
-    &:focus {
+    &:focus,
+    &:active,
+    &:target,
+    &:focus-visible {
       outline: 1px dotted #64ccc5;
+      transition: none;
     }
   }
 `
