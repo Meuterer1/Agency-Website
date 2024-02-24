@@ -19,9 +19,14 @@ const FooterSection = styled.footer`
 
     a {
       color: white;
+      transition: 0.7s ease;
 
       &:hover {
         color: #64ccc5;
+      }
+
+      &:focus {
+        outline: 1px dotted #64ccc5;
       }
     }
 
@@ -148,7 +153,6 @@ const Footer: React.FC = () => {
           <Subscribe />
         </div>
       </div>
-      <div></div>
     </FooterSection>
   )
 }

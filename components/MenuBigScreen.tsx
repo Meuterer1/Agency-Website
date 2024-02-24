@@ -26,10 +26,15 @@ const MenuBigScreenNav = styled.nav<MenuBigScreenProps>`
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 0.54px;
+    transition: 0.7s ease;
 
     &:hover {
       cursor: pointer;
       background-color: #64ccc5;
+    }
+
+    &:focus {
+      outline: 3px dotted #64ccc5;
     }
   }
 
@@ -37,8 +42,14 @@ const MenuBigScreenNav = styled.nav<MenuBigScreenProps>`
     color: ${props => props.color};
     font-size: 20px;
     font-weight: 400;
+    transition: 0.7s ease;
+
     &:hover {
       color: #64ccc5;
+    }
+
+    &:focus {
+      outline: 1px dotted #64ccc5;
     }
   }
 `

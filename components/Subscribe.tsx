@@ -37,10 +37,15 @@ const SubscribeDiv = styled.div`
     color: white;
     border-radius: 20px;
     border: none;
+    transition: 0.7s ease;
 
     &:hover {
       background-color: #64ccc5;
       cursor: pointer;
+    }
+
+    &:focus {
+      outline: 3px dotted #64ccc5;
     }
 
     @media (max-width: 420px) {

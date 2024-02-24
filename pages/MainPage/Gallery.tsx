@@ -33,6 +33,7 @@ const GallerySection = styled.section`
       button {
         align-self: end;
         margin: 80px 10% 0 0;
+        padding: 10px 20px 10px 10px;
       }
     }
   }

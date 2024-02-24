@@ -17,7 +17,7 @@ export interface StyledButtonProps extends ButtonProps {
 }
 
 const ButtonSection = styled.button<ButtonProps>`
-  padding: 10px 20px 10px 10px;
+  padding: 0 20px;
   background: ${props => props.background};
   border: none;
   border-radius: 23px;
@@ -34,6 +34,10 @@ const ButtonSection = styled.button<ButtonProps>`
     cursor: pointer;
   }
 
+  &:focus {
+    outline: 3px dotted #64ccc5;
+  }
+
   span {
     background-color: ${props => props.spanbackground};
     width: 28px;
@@ -44,10 +48,16 @@ const ButtonSection = styled.button<ButtonProps>`
     justify-content: center;
   }
 
+  .buttonText {
+    padding: 0;
+  }
+
   @media (max-width: 460px) {
     gap: 5px;
     padding: 10px 15px 10px 5px;
   }
+
+  transition: 0.7s ease;
 `
 
 const SliderButtonSection = styled(ButtonSection)`
@@ -88,7 +98,7 @@ export const Button: FC<StyledButtonProps> = ({
           alt="arrow right"
         />
       </span>
-      {text}
+      <p className="buttonText">{text}</p>
     </ButtonSection>
   )
 }
