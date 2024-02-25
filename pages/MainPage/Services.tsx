@@ -41,7 +41,7 @@ const ServicesSection = styled.section`
 
     width: 100%;
 
-    @media (max-width: 1030px) {
+    @media (max-width: 1500px) {
       justify-content: center;
     }
   }

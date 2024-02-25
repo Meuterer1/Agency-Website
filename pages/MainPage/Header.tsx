@@ -268,22 +268,7 @@ const HeadSection = styled.section`
     }
   }
 
-  .smallMenuActive {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    padding: 50px;
-
-    ul {
-      display: flex;
-      flex-direction: column;
-      padding: 50px 20px 30px 20px;
-      align-items: end;
-    }
+  
 `
 
 const Header: React.FC = () => {

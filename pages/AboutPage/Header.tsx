@@ -38,6 +38,13 @@ const HeaderSection = styled.header`
       @media (max-width: 820px) {
         width: 90%;
       }
+
+      @media (max-width: 450px) {
+        padding-top: 20px;
+        h3 {
+          font-size: 44px;
+        }
+      }
     }
 
     .HeaderImage {
@@ -61,16 +68,44 @@ const HeaderSection = styled.header`
       }
 
       img:first-of-type {
-        bottom: 0;
-        right: 60px;
+        bottom: 80px;
+        right: 90px;
+
+        @media (max-width: 1050px) {
+          right: 20%;
+          bottom: 65px;
+        }
+
+        @media (max-width: 700px) {
+          right: 15%;
+        }
       }
       img:nth-child(2) {
-        bottom: -25px;
-        right: 30px;
+        bottom: 55px;
+        right: 60px;
+
+        @media (max-width: 1050px) {
+          right: 15%;
+          bottom: 40px;
+        }
+
+        @media (max-width: 700px) {
+          right: 10%;
+        }
       }
+
       img:last-of-type {
-        bottom: -50px;
-        right: 0;
+        bottom: 30px;
+        right: 30px;
+
+        @media (max-width: 1050px) {
+          right: 10%;
+          bottom: 15px;
+        }
+
+        @media (max-width: 700px) {
+          right: 5%;
+        }
       }
 
       @media (max-width: 1050px) {
@@ -103,7 +138,7 @@ const HeaderSection = styled.header`
 
     @media (max-width: 1050px) {
       flex-direction: column;
-      height: 1000px;
+      height: 1100px;
     }
 
     @media (max-width: 820px) {
@@ -112,6 +147,8 @@ const HeaderSection = styled.header`
 
     @media (max-width: 450px) {
       width: 100%;
+      height: 1000px;
+      padding-top: 20px;
     }
   }
 
